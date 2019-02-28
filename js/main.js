@@ -1,8 +1,8 @@
 var botellas = [1,2,3]
-var totalOrigen = "";
-var cantidadBoteUno = "";
-var cantidadBoteDos = "";
-var cantidadBoteTres = "";
+var totalOrigen = 0;
+var cantidadBoteUno = 0;
+var cantidadBoteDos = 0;
+var cantidadBoteTres = 0;
 var cantidadBoteCinco = "";
 var totalOrigen = "";
 
@@ -27,12 +27,14 @@ function botellasCalc(){
     				cantidadBoteTres = Math.trunc(temp)
     				$("#botellas-display").html("botellas de 3 litros:  "+ cantidadBoteUno+ "<br>botellas de 2 litros:"+ cantidadBoteDos+ "<br>botellas de 1 litro:"+ cantidadBoteTres)
     			}
-
-    		}
-
-    	}
-
-	}
+            }
+        }
+    }else 
+    
+    if(totalOrigen % botellas[2]===0){
+        cantidadBoteUno = Math.trunc(totalOrigen/botellas[2])
+        $("#botellas-display").html("botellas de 3 litros:  "+ cantidadBoteUno+ "<br>botellas de 2 litros:"+ cantidadBoteDos)
+    }
 }
 
 
